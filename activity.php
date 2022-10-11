@@ -2,7 +2,6 @@
   session_start();
   include('server.php');
 
-//$advisory = $_SESSION['Advisory'];
 $sid = $_SESSION['sid'];
 $email = $_SESSION['email'];
 $advisory = $_SESSION['advisory'];
@@ -75,7 +74,7 @@ include('errors.php');
 echo "</div>";
 
 // Selecting Event data based on the id tag in the url
-$db = mysqli_connect('192.168.0.3', 'root', 'Dardar7816!', 'Nest');
+$db = mysqli_connect('207.144.242.167', 'admin', 'Danny9518!', 'Nest');
 
 
 
