@@ -19,7 +19,7 @@ $activated = "activated";
 
 
 
-$db = mysqli_connect('207.244.242.167', 'admin', 'Danny9518!', 'Nest');
+$db = mysqli_connect('127.0.0.1', 'admin', 'Danny9518!', 'Nest');
 
 
 

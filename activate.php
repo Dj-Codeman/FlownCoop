@@ -1,8 +1,8 @@
 <?php
 // Change this to your connection info.
-$DATABASE_HOST = '192.168.0.3'; 
-$DATABASE_USER = 'Client';
-$DATABASE_PASS = 'Y&0E1{8u){S?';
+$DATABASE_HOST = '127.0.0.1'; 
+$DATABASE_USER = 'admin';
+$DATABASE_PASS = 'Danny9518!';
 $DATABASE_NAME = 'Nest';
 
 // Try and connect using the info above.
