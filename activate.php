@@ -1,6 +1,6 @@
 <?php
 // Change this to your connection info.
-$DATABASE_HOST = '192.168.0.3';
+$DATABASE_HOST = '192.168.0.3'; 
 $DATABASE_USER = 'Client';
 $DATABASE_PASS = 'Y&0E1{8u){S?';
 $DATABASE_NAME = 'Nest';
@@ -29,7 +29,7 @@ $data = mysqli_fetch_assoc($result_1);
 				$results = mysqli_query($db, $user_check_query);
 				$data_1 = mysqli_fetch_assoc($results);
 				if (empty($data_1['email'])) {
-							  echo "We were unable to activate your account at this time.";
+							  	echo "We were unable to activate your account at this time.";
 								echo "</br>";
 								echo "Please email audubonssac@outlook.com and attach the following values:";
 								echo "</br> Email: $email </br> Activation code: $old_code";
