@@ -19,14 +19,16 @@ $activated = "activated";
 
 
 
-$db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
+// $db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
 
 
 
 // DIE statment
-if (mysqli_connect_errno()) {
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
+
+// if (mysqli_connect_errno()) {
+// 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+// }
+
 //Staff Registration
 if (isset($_POST['reg_staff'])) {
 

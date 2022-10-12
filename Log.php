@@ -15,9 +15,6 @@ if (isset($_GET['logout'])) {
 
 include('server.php');
 
-$log_query = "SELECT * FROM LoggedEvents WHERE sid = '$sid' ";
-$result = mysqli_query($db, $log_query);
-
 ?>
 
 
@@ -58,9 +55,7 @@ $result = mysqli_query($db, $log_query);
 
       <!-- logout button -->
       <a href="logout.php">
-        <button style="padding-bottom:1%;" class="logout-corner<?php if (" $site" == "PassChange") { ?> current
-          <?php
-}?>">
+        <button style="padding-bottom:1%;" class="logout-corner<?php if (" $site" == "PassChange") { ?> current <?php }?>">
           <i style="color:white;" class="fas fa-user"></i>
           <p class="a" style="color:white;">Logout</p>
         </button>
@@ -103,6 +98,9 @@ while ($row = mysqli_fetch_assoc($t1)) {
   echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Your current total. : $Totals </p>";
   echo "</div>";
 }
+
+$log_query = "SELECT * FROM LoggedEvents WHERE sid = '$sid' order by eventdate desc ";
+$result = mysqli_query($db, $log_query);
 
 while ($row = mysqli_fetch_assoc($result)) {
   if ($row['credited'] == 0) {
