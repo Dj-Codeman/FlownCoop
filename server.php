@@ -19,7 +19,7 @@ $activated = "activated";
 
 
 
-$db = mysqli_connect('207.144.242.167', 'admin', 'Danny9518!', 'Nest');
+$db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
 
 
 
@@ -94,7 +94,7 @@ if ($password_1 == $username){
       array_push($errors, "This email adress is registered with and account");
     }
 
-	if ($user['Advisory'] === $advisory) {
+		if ($user['Advisory'] === $advisory) {
       array_push($errors, "This email adress is registered with and account");
     }
 
@@ -104,7 +104,7 @@ if ($password_1 == $username){
 	// This password is one way encryped
 
 
-	$uniqid = uniqid();
+	  $uniqid = uniqid();
   	$staffid = MD5(uniqid());
 
   	$query = "INSERT INTO Nest.StaffAccounts ( uid, FirstName, LastName, email, password, salt, Advisory, activation_code, Staff_id)

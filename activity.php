@@ -2,6 +2,7 @@
   session_start();
   include('server.php');
 
+//$advisory = $_SESSION['Advisory'];
 $sid = $_SESSION['sid'];
 $email = $_SESSION['email'];
 $advisory = $_SESSION['advisory'];
@@ -64,7 +65,7 @@ $name .= $_SESSION['LastName'];
 
 echo "<div>";
 
-// Pulling id from session
+// Determining event id
 $id = $_GET['id'];
 if (empty($id)) {
 $id = $_POST['event-number'];
@@ -74,7 +75,7 @@ include('errors.php');
 echo "</div>";
 
 // Selecting Event data based on the id tag in the url
-$db = mysqli_connect('207.144.242.167', 'admin', 'Danny9518!', 'Nest');
+$db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
 
 
 
