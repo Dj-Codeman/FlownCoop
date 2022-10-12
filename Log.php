@@ -36,7 +36,7 @@ include('server.php');
     <h2 class="Welcome">THE NEST (beta)</h2>
     <div class="relative">
       <p class="account-corner"> Welcome back,
-        <?= $_SESSION['Firstname']?>!
+        <?php $FirstName = $_SESSION['Firstname']?>!
       </p>
       <style>
         a {
