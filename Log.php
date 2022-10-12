@@ -84,8 +84,9 @@ include('server.php');
   </div>
 
   <div>
-    <p>
-      <?php
+    <!-- <p> -->
+
+<?php
 
 
 
@@ -141,7 +142,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 ?>
-    </p>
+    <!-- </p> -->
   </div>
 
   <div class="home-events"
