@@ -164,7 +164,7 @@ PullEvent();
     <h2 style=" text-align: center; margin-left:1%; width: 0px auto;"> <?php echo  "$EventName" ; ?> </h2>
     <h2 style=" padding-bottom: 5% ; text-align: center; padding-top: 5%; padding-left:20%; padding-right:5%; "> <?php echo "$EventDescription";?></h2>
     <?php
-    $button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+    $button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
     $button .= "<button style=\"position: absolute; right: 0px; bottom: 0px; margin-top: 4%; float: right;\" type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
     $button .= "</a>";
     echo $button;
@@ -181,7 +181,7 @@ PullEvent();
       <h2 style="text-align: left; padding-top: 3%; padding-left:5%; padding-right:20%; "> <?php echo "$EventDescription";?>
       </h2>
       <?php
-      $button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+      $button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
       $button .= "<button type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
       $button .= "</a>";
       echo $button;
@@ -197,7 +197,7 @@ PullEvent();
   <h2 style=" text-align: center; margin-left:1%; width: 0px auto;"> <?php echo  "$EventName" ; ?> </h2>
   <h2 style=" padding-bottom: 5% ; text-align: center; padding-top: 5%; padding-left:20%; padding-right:5%; "> <?php echo "$EventDescription";?></h2>
   <?php
-  $button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+  $button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
   $button .= "<button style=\"position: absolute; right: 0px; bottom: 0px; margin-top: 4%; float: right;\" type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
   $button .= "</a>";
   echo $button;
@@ -214,7 +214,7 @@ PullEvent();
       <h2 style="text-align: left; padding-top: 3%; padding-left:5%; padding-right:20%; "> <?php echo "$EventDescription";?>
       </h2>
       <?php
-      $button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+      $button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
       $button .= "<button type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
       $button .= "</a>";
       echo $button;
@@ -230,7 +230,7 @@ PullEvent();
       <h2 style=" text-align: center; margin-left:1%; width: 0px auto;"> <?php echo  "$EventName" ; ?> </h2>
       <h2 style=" padding-bottom: 5% ; text-align: center; padding-top: 5%; padding-left:20%; padding-right:5%; "> <?php echo "$EventDescription";?></h2>
       <?php
-      $button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+      $button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
       $button .= "<button style=\"position: absolute; right: 0px; bottom: 0px; margin-top: 4%; float: right;\" type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
       $button .= "</a>";
       echo $button;
@@ -242,8 +242,7 @@ PullEvent();
 
     <?php
     function PullEvent() {
-      global $eventid, $EventDescription, $EventPicture, $EventName ;
-      $db = mysqli_connect('192.168.0.3', 'Client', 'Y&0E1{8u){S?', 'Nest');
+      global $eventid, $EventDescription, $EventPicture, $EventName, $db;
       $query = " SELECT * FROM ListedEvents WHERE id = $eventid LIMIT 1" ;
       $result = mysqli_query($db, $query);
       $row = mysqli_fetch_array($result);
@@ -270,7 +269,7 @@ PullEvent();
     <!-- end of test function -->
     <div class="home-events" style="margin-top: 40px; overflow: hidden; margin-left: 0%; width: 100%;  height: 10%; padding-bottom: 3% ; " >
       <h3 style="color: #000000; text-align: center; ">
-        Have feedback or an issue ? <a href="https://dwcloud.tk/index.php/apps/forms/KfmafYapRqJAqPQk" style="color:blue; padding-top: 90px; "   >Click Here</a>
+        Have feedback or an issue ? <a href="https://cloud.ramfield.net/apps/forms/XmPTc8JniqbFtzqm" style="color:blue; padding-top: 90px; "   >Click Here</a>
       </h3>
     </div>
 

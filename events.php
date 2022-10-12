@@ -72,6 +72,6 @@ PullEventPage();
 
 <div class="home-events" style="margin-top: 10px; overflow: hidden; margin-left: 0%; width: 100%;  height: 10%; padding-bottom: 3%; margin-top: 50%;" >
   <h3 style="color: #000000; text-align: center; ">
-    Have feedback or an issue ? <a href="https://dwcloud.tk/index.php/apps/forms/KfmafYapRqJAqPQk" style="color:blue; padding-top: 90px; "   >Click Here</a>
+    Have feedback or an issue ? <a href="https://cloud.ramfield.net/apps/forms/XmPTc8JniqbFtzqm" style="color:blue; padding-top: 90px; "   >Click Here</a>
   </h3>
 </div>

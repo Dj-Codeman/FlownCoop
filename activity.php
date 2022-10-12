@@ -180,7 +180,7 @@ echo "
   <div class="home-events"
     style="margin-top: 120px; overflow: hidden; margin-left: 0%; width: 100%;  height: 10%; padding-bottom: 3% ; ">
     <h3 style="color: #000000; text-align: center; ">
-      Have feedback or an issue ? <a href="https://dwcloud.tk/index.php/apps/forms/KfmafYapRqJAqPQk"
+      Have feedback or an issue ? <a href="https://cloud.ramfield.net/apps/forms/XmPTc8JniqbFtzqm"
         style="color:blue; padding-top: 90px; ">Click Here</a>
     </h3>
   </div>
@@ -226,7 +226,7 @@ if (isset($_POST['Event-Register'])) {
   $subject = 'You have registered for "' . $Eventname . '" and it has already been submitted to your advisor !';
   $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
   $headers .= "Bcc: darrionjw@outlook.com\r\n";
-  $tracker_link = 'https://www.audubonnest.tk/single-event.php?code=' . $uniqid;
+  $tracker_link = 'https://nest.ramfield.net/single-event.php?code=' . $uniqid;
   $message = '<p> You have been registered for the event titled:  ' . $Eventname . ' !</p>';
   $message .= '<p> If there was information not provided on the listing such as a link, room number or address please contact your advisor !</p>';
   $message .= '<p> If you want to see the status of this event click here: <a href="' . $tracker_link . '"> ' . $uniqid . '</p>';
@@ -244,7 +244,7 @@ if (isset($_POST['Event-Register'])) {
     $subject = "$name has registered for the $eventName event ! ";
     $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
     $headers .= "Bcc: darrionjw@outlook.com\r\n";
-    $tracker_link = 'https://audubonnest.tk/staff-login.php' . $uniqid;
+    $tracker_link = 'https://nest.ramfield.net/staff-login.php' . $uniqid;
     $message = '<p>' . $name . ' has registered for the event titile' . $EventName . ' there email address is as follows ' . $email . 'If you excluded any information such as a link or an address from the listing now is the time to communicate with students and finalize that information. </p>';
     $message .= "</br>";
     $message .= "</br>";

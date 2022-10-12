@@ -107,7 +107,7 @@ while($row1 = mysqli_fetch_assoc($result1)) {
   echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Pending  Hours   : $pending </p>";
   echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Total Hours      : $totals / 120:00:00 </p>";
   echo "<input type = \"hidden\" name = \"sid\" value = \"$sid\" />";
-  echo "<a href=\"https://www.audubonnest.tk/profile.php?sid=$sid\"";
+  echo "<a href=\"https://nest.ramfield.net/profile.php?sid=$sid\"";
   echo "<button class=\"btn-login\" style=\" position: absolute; right: 0px; bottom: 0px; margin-top: 3.4%; margin-right: 0%; margin-left: 2%; float: right;\"> View Student </button>";
   echo "</a>";
   echo "</form>";

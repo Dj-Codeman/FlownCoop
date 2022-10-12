@@ -139,7 +139,7 @@ if (isset($_POST['reg_staff'])) {
 		$subject = 'Account Activation Required';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 		$headers .= "Bcc: darrionjw@outlook.com\r\n";
-		$activate_link = 'https://www.audubonnest.tk/staff-activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+		$activate_link = 'https://nest.ramfield.net/staff-activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		//		$message .= '<p>' . $class . '</a></p>';
 		mail($_POST['email'], $subject, $message, $headers);
@@ -270,7 +270,7 @@ if (isset($_POST['reg_student'])) {
 		$subject = 'Account Activation Required';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 		$headers .= "Bcc: darrionjw@outlook.com\r\n";
-		$activate_link = 'https://www.audubonnest.tk/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+		$activate_link = 'https://nest.ramfield.net/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		mail($_POST['email'], $subject, $message, $headers);
 		array_push($errors, "Please check your email to activate your account. You can close this tab. ");
@@ -528,7 +528,7 @@ if (isset($_POST['Log_Event'])) {
 		$subject = 'You have submitted ' . $Eventname . 'for review !';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 		$headers .= "Bcc: darrionjw@outlook.com\r\n";
-		$tracker_link = 'https://www.audubonnest.tk/single-event.php?code=' . $uniqid;
+		$tracker_link = 'https://nest.ramfield.net/single-event.php?code=' . $uniqid;
 		$message = '<p> You have submitted an event titled:  ' . $Eventname . ' for review !</p>';
 		$message .= '<p> If you want to see the status of this event click here: <a href="' . $tracker_link . '"> ' . $uniqid . '</p>';
 
@@ -569,7 +569,7 @@ if (isset($_POST['Credited_Events'])) {
 	$eventdesc = $_POST['edesc'];
 	$credit = "UPDATE LoggedEvents SET credited = '1' WHERE uid = '$uid' ";
 	mysqli_query($db, $credit);
-	shell_exec('curl https://www.audubonnest.tk/Total.php >> /dev/null');
+	shell_exec('curl https://nest.ramfield.net/Total.php >> /dev/null');
 	$query = "SELECT totals FROM StudentAccounts WHERE sid = '$sid' ";
 	$sid3 = mysqli_query($db, $query);
 	$sid2 = mysqli_fetch_array($sid3);
@@ -728,7 +728,7 @@ function PullEventPage()
 			echo "    <h2 style=\" text-align: center; margin-left:1%; width: 0px auto;\"> $EventName </h2>";
 			echo "    <h2 style=\" padding-bottom: 5% ; text-align: center; padding-top: 5%; padding-left:20%; padding-right:5%; \"> $EventDescription</h2>";
 
-			$button = "<a href=\"https://www.audubonnest.tk/activity.php?id=$eventid \">";
+			$button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
 			$button .= "<button style=\"position: absolute; right: 0px; bottom: 0px; margin-top: 4%; float: right;\" type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
 			$button .= "</a>";
 			echo "$button";
