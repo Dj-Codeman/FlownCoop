@@ -64,7 +64,7 @@ $name .= $_SESSION['LastName'];
 
 echo "<div>";
 
-// Determining event id
+// Pulling id from session
 $id = $_GET['id'];
 if (empty($id)) {
 $id = $_POST['event-number'];
