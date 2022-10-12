@@ -1,5 +1,5 @@
 <?php
-$filename = 'uploads';
+$filename = '../uploads';
 if (is_writable($filename)) {
     echo 'The file is writable';
 }
