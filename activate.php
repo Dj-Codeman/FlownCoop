@@ -1,12 +1,9 @@
 <?php
 // Change this to your connection info.
-$DATABASE_HOST = '127.0.0.1'; 
-$DATABASE_USER = 'admin';
-$DATABASE_PASS = 'Danny9518!';
-$DATABASE_NAME = 'Nest';
+include('server.php');
 
 // Try and connect using the info above.
-$db = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
 if (mysqli_connect_errno()) {
 	// If there is an error with the connection, stop the script and display the error.
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
@@ -24,37 +21,39 @@ $data = mysqli_fetch_assoc($result_1);
 
 
 // If username Exists
-      if (empty($data['email'])) {
-				$user_check_query = "SELECT email, activation_code FROM StaffAccounts WHERE email = '$email' LIMIT 1";
-				$results = mysqli_query($db, $user_check_query);
-				$data_1 = mysqli_fetch_assoc($results);
-				if (empty($data_1['email'])) {
-							  	echo "We were unable to activate your account at this time.";
-								echo "</br>";
-								echo "Please email audubonssac@outlook.com and attach the following values:";
-								echo "</br> Email: $email </br> Activation code: $old_code";
-								echo "</br> Code: Stu_Inv_Link </br>";
-								echo "<a href='index.php'>Login</a>";
-							} else {
-								echo "We were unable to activate your account an unexpected error occoured.";
-								echo "</br>";
-								echo "Please email audubonssac@outlook.com and attach the following values:";
-								echo "</br> Email: $email </br> Activation code: $old_code  <br>";
-								echo "</br> Code: Stu_Acc_Msp";
-								echo "<a href='index.php'>Login</a>";
-							}
-				} else {
+if (empty($data['email'])) {
+	$user_check_query = "SELECT email, activation_code FROM StaffAccounts WHERE email = '$email' LIMIT 1";
+	$results = mysqli_query($db, $user_check_query);
+	$data_1 = mysqli_fetch_assoc($results);
+	if (empty($data_1['email'])) {
+		echo "We were unable to activate your account at this time.";
+		echo "</br>";
+		echo "Please email audubonssac@outlook.com and attach the following values:";
+		echo "</br> Email: $email </br> Activation code: $old_code";
+		echo "</br> Code: Stu_Inv_Link </br>";
+		echo "<a href='index.php'>Login</a>";
+	}
+	else {
+		echo "We were unable to activate your account an unexpected error occoured.";
+		echo "</br>";
+		echo "Please email audubonssac@outlook.com and attach the following values:";
+		echo "</br> Email: $email </br> Activation code: $old_code  <br>";
+		echo "</br> Code: Stu_Acc_Msp";
+		echo "<a href='index.php'>Login</a>";
+	}
+}
+else {
 
 
-      $activated_query = "UPDATE StudentAccounts SET activation_code = '$newcode' WHERE activation_code = '$old_code' ";
-      mysqli_query($db, $activated_query );
-			echo '<script type="text/javascript">';
-			echo "alert('Congratulations ! Your account has been activated.');";
-			echo 'window.location.href = "index.php";';
-			echo '</script>';
+	$activated_query = "UPDATE StudentAccounts SET activation_code = '$newcode' WHERE activation_code = '$old_code' ";
+	mysqli_query($db, $activated_query);
+	echo '<script type="text/javascript">';
+	echo "alert('Congratulations ! Your account has been activated.');";
+	echo 'window.location.href = "index.php";';
+	echo '</script>';
 
 
-      }
+}
 
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-$from    = 'noreply@dwcloud.tk';
+$from = 'noreply@dwcloud.tk';
 $subject = 'Account Activation Required';
 $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 $headers .= "Bcc: darrionjw@outlook.com\r\n";

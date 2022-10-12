@@ -13,7 +13,7 @@ $class = "CREATE TABLE IF NOT EXISTS Nest.Class_$advisory (
         sid VARCHAR(255) NOT NULL,
         totals VARCHAR(255) NOT NULL
 )";
-        mysqli_query($db, $class);
+mysqli_query($db, $class);
 
 
 ?>
