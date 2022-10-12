@@ -15,9 +15,9 @@ if (isset($_POST['submit'])) {
 	 form@my-web-site.com is good.
 	 */
 
-	$from_add = "noreply@nest.dwcloud.tk";
+	$from_add = "nest@ramfield.nt";
 
-	$to_add = "darrionwhitfield7@gmail.com"; //<-- put your yahoo/gmail email address here
+	$to_add = "dwhitfield@ramfield.net"; //<-- put your yahoo/gmail email address here
 
 	$subject = "Test Subject";
 	$message = "Test Message";

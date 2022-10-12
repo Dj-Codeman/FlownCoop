@@ -521,8 +521,7 @@ if (isset($_POST['Log_Event'])) {
 
 
 		$Credited = '0';
-		$query = "INSERT INTO Nest.LoggedEvents (sid, uid, eventname, eventdesc, eventdate, eventmail, eventhead, eventloca, eventbegi, eventend, Image, credited )
-			VALUES('$sid', '$uniqid','$Eventname', '$Eventdesc', '$Eventdate', '$Eventmail', '$Eventhead', '$Eventloca', '$Eventbegin', '$Eventend', '$target_file', '$Credited' )";
+		$query = "INSERT INTO Nest.LoggedEvents (sid, uid, eventname, eventdesc, eventdate, eventmail, eventhead, eventloca, eventbegi, eventend, Image, credited ) VALUES('$sid', '$uniqid','$Eventname', '$Eventdesc', '$Eventdate', '$Eventmail', '$Eventhead', '$Eventloca', '$Eventbegin', '$Eventend', '$target_file', '$Credited' )";
 		mysqli_query($db, $query);
 
 		// email recipt of the log submited
