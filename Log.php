@@ -13,7 +13,11 @@ if (isset($_GET['logout'])) {
   header("location: login.php");
 }
 
-include('server.php');
+// Dont include server.php
+// include('server.php');
+// require_once('server.php');
+$db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
+
 
 ?>
 
@@ -36,7 +40,7 @@ include('server.php');
     <h2 class="Welcome">THE NEST (beta)</h2>
     <div class="relative">
       <p class="account-corner"> Welcome back,
-        <?php $FirstName = $_SESSION['Firstname']?>!
+        <?php $Firstname = $_SESSION['Firstname']?>!
       </p>
       <style>
         a {

@@ -138,7 +138,8 @@ echo " <!-- Begining of the new BODY -->
     <h3 style=\" margin-top: 1%; text-align: center; margin-left:1%; width: 0px auto;\"> Date: $EventDate </h3>
     <h3 style=\" margin-top: 1%; text-align: center; margin-left:1%; width: 0px auto;\"> Organizer: $EventOrganizer </h3>
     <h3 style=\" margin-top: 1%; text-align: center; margin-left:1%; width: 0px auto;\"> Organizer Email: $EventEmail </h3>
-    <h3 style=\" margin-right: -30%; margin-top: 1%; text-align: center; margin-left:1%; width: 0px auto;\"> Location: $EventLocation </h3>
+    </br>
+    <h3 style=\" margin-right:-1%; margin-top: 1%; text-align: center; margin-left:30%; width: 0px auto;\"> Location: $EventLocation </h3>
     <h2 style=\" margin-top: 1%; text-align: center; width: 50%; float: right; margin-right: 10% ;  \"> $EventDescription </h2>
     <input type = \"hidden\" name = \"sid\" value = \"$sid\" />
     <input type = \"hidden\" name = \"email\" value = \"$email\" />
@@ -158,7 +159,7 @@ if ($result) {
   }
   else {
     echo " <button type=\"submit\" class=\"btn-login\" name=\"Event-Register\" style=\"
-  font-size: 200%;  position: absolute; left: 140px; margin-top: 3.4%; margin-right: 3%;
+  font-size: 200%;  position: absolute; right: 75%; margin-top: 10.0%; margin-right: 1%;
    float: left;\"> Register </button> ";
   }
 

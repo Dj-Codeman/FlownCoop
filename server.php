@@ -715,7 +715,7 @@ if (isset($_POST['Unflag_Events'])) {
 function PullEventPage()
 {
 	global $db;
-	for ($x = 0; $x <= 20; $x++) {
+	for ($x = 0; $x <= 5; $x++) {
 		$query = " SELECT * FROM ListedEvents WHERE id = $x LIMIT 1";
 		$result = mysqli_query($db, $query);
 		$row = mysqli_fetch_array($result);
@@ -723,6 +723,7 @@ function PullEventPage()
 		$EventDescription = $row['Short_Description'];
 		$EventPicture = $row['PictureUrl'];
 		$EventName = $row['Title'];
+		$EventId = $row['id'];
 		if ($result->num_rows) {
 
 			echo "    <div class=\"home-events\" style=\"margin-top: 40px; overflow: hidden; margin-left: 10%; width: 80%;  height: auto;\">";
@@ -730,7 +731,7 @@ function PullEventPage()
 			echo "    <h2 style=\" text-align: center; margin-left:1%; width: 0px auto;\"> $EventName </h2>";
 			echo "    <h2 style=\" padding-bottom: 5% ; text-align: center; padding-top: 5%; padding-left:20%; padding-right:5%; \"> $EventDescription</h2>";
 
-			$button = "<a href=\"https://nest.ramfield.net/activity.php?id=$eventid \">";
+			$button = "<a href=\"https://nest.ramfield.net/activity.php?id=$EventId \">";
 			$button .= "<button style=\"position: absolute; right: 0px; bottom: 0px; margin-top: 4%; float: right;\" type=\"submit\" class=\"btn-login\" name=\" More Info \" > More Info </button>";
 			$button .= "</a>";
 			echo "$button";
