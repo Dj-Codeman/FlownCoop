@@ -137,10 +137,10 @@ if (isset($_POST['reg_staff'])) {
 
 		//	$_SESSION['FirstName'] = $FirstName;
 //	$_SESSION['LastName'] = $LastName;
-		$from = 'noreply@dwcloud.tk';
+		$from = 'no-reply@ramfield.net';
 		$subject = 'Account Activation Required';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-		$headers .= "Bcc: darrionjw@outlook.com\r\n";
+		$headers .= "Bcc: accounts@ramfield.net\r\n";
 		$activate_link = 'https://nest.ramfield.net/staff-activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		//		$message .= '<p>' . $class . '</a></p>';
@@ -268,10 +268,10 @@ if (isset($_POST['reg_student'])) {
 		mysqli_query($db, $query);
 		//	$_SESSION['FirstName'] = $FirstName;
 //	$_SESSION['LastName'] = $LastName;
-		$from = 'noreply@dwcloud.tk';
+		$from = 'no-reply@ramfield.net';
 		$subject = 'Account Activation Required';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-		$headers .= "Bcc: darrionjw@outlook.com\r\n";
+		$headers .= "Bcc: accounts@ramfield.net\r\n";
 		$activate_link = 'https://nest.ramfield.net/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
 		$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
 		mail($_POST['email'], $subject, $message, $headers);
@@ -525,10 +525,10 @@ if (isset($_POST['Log_Event'])) {
 		mysqli_query($db, $query);
 
 		// email recipt of the log submited
-		$from = 'noreply@dwcloud.tk';
+		$from = 'no-reply@ramfield.net';
 		$subject = 'You have submitted ' . $Eventname . 'for review !';
 		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-		$headers .= "Bcc: darrionjw@outlook.com\r\n";
+		$headers .= "Bcc: accounts@ramfield.net\r\n";
 		$tracker_link = 'https://nest.ramfield.net/single-event.php?code=' . $uniqid;
 		$message = '<p> You have submitted an event titled:  ' . $Eventname . ' for review !</p>';
 		$message .= '<p> If you want to see the status of this event click here: <a href="' . $tracker_link . '"> ' . $uniqid . '</p>';
@@ -542,10 +542,10 @@ if (isset($_POST['Log_Event'])) {
 		while ($row = mysqli_fetch_assoc($result)) {
 			$email_2 = $row['email'];
 
-			$from = 'noreply@dwcloud.tk';
+			$from = 'no-reply@ramfield.net';
 			$subject = 'A student submitted ' . $Eventname . 'for review !';
 			$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-			$headers .= "Bcc: darrionjw@outlook.com\r\n";
+			$headers .= "Bcc: accounts@ramfield.net\r\n";
 			$tracker_link = 'https://audubonnest.tk/staff-login.php' . $uniqid;
 			$message = '<p> A student has submitted an event titled:  ' . $Eventname . ' for review !</p>';
 			$message .= '<p> If you want to credit or flag this event click here and login: <a href="' . $tracker_link . '"> ' . $uniqid . '</p>';
@@ -579,10 +579,10 @@ if (isset($_POST['Credited_Events'])) {
 	array_push($errors, "Event $eventname Credited");
 	// mail to the student when the event is credited
 	// email recipt of the log submited
-	$from = 'noreply@dwcloud.tk';
+	$from = 'no-reply@ramfield.net';
 	$subject = 'An event has been credited! ';
 	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	$headers .= "Bcc: darrionjw@outlook.com\r\n";
+	$headers .= "Bcc: accounts@ramfield.net\r\n";
 	$message = '<p> Hi ' . $firstname . ', good news!</p>';
 	$message .= '<p> The event you submited titled: ' . $eventname . ', has been Credited ! This puts your current total at : ' . $total . ' out of 120:00:00. Keep up the good work! </p>';
 
@@ -650,10 +650,10 @@ if (isset($_POST['Flag_Events'])) {
 
 	array_push($errors, "Event $eventname Flagged!");
 
-	$from = 'noreply@dwcloud.tk';
+	$from = 'no-reply@ramfield.net';
 	$subject = 'An event you submitted has been flagged! ';
 	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	$headers .= "Bcc: darrionjw@outlook.com\r\n";
+	$headers .= "Bcc: accounts@ramfield.net\r\n";
 	$message = '<p> Hi ' . $firstname . '!</p>';
 	$message .= '<p> The event you submited titled: ' . $eventname . ', has been flagged by your advisor! Please contact for advisor with questions and concerns. </p>';
 
@@ -675,10 +675,10 @@ if (isset($_POST['Delete_Events'])) {
 
 	array_push($errors, "Event $eventname Deleted!");
 
-	$from = 'noreply@dwcloud.tk';
+	$from = 'no-reply@ramfield.net';
 	$subject = 'An event you submitted has been deleted! ';
 	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	$headers .= "Bcc: darrionjw@outlook.com\r\n";
+	$headers .= "Bcc: accounts@ramfield.net\r\n";
 	$message = '<p> Hi ' . $firstname . '!</p>';
 	$message .= '<p> The event you submited titled: ' . $eventname . ', has been deleted by your advisor! Please contact for advisor with questions and concerns. </p>';
 
@@ -699,10 +699,10 @@ if (isset($_POST['Unflag_Events'])) {
 
 	array_push($errors, "Event $eventname unflagged!");
 
-	$from = 'noreply@dwcloud.tk';
+	$from = 'no-reply@ramfield.net';
 	$subject = 'An event you submitted has been unflagged! ';
 	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-	$headers .= "Bcc: darrionjw@outlook.com\r\n";
+	$headers .= "Bcc: accounts@ramfield.net\r\n";
 	$message = '<p> Hi ' . $firstname . ', Good News!</p>';
 	$message .= '<p> The event you submited titled: ' . $eventname . ', has been unflagged by your advisor! Please contact for advisor with questions and concerns. </p>';
 

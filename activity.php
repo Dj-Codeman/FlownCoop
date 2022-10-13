@@ -223,10 +223,10 @@ if (isset($_POST['Event-Register'])) {
 
 
   // email recipt of the log submited
-  $from = 'noreply@dwcloud.tk';
+  $from = 'no-reply@ramfield.net';
   $subject = 'You have registered for "' . $Eventname . '" and it has already been submitted to your advisor !';
   $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= "Bcc: darrionjw@outlook.com\r\n";
+  $headers .= "Bcc: accounts@ramfield.net\r\n";
   $tracker_link = 'https://nest.ramfield.net/single-event.php?code=' . $uniqid;
   $message = '<p> You have been registered for the event titled:  ' . $Eventname . ' !</p>';
   $message .= '<p> If there was information not provided on the listing such as a link, room number or address please contact your advisor !</p>';
@@ -241,10 +241,10 @@ if (isset($_POST['Event-Register'])) {
   while ($row = mysqli_fetch_assoc($result)) {
     $email_2 = $row['email'];
 
-    $from = 'noreply@dwcloud.tk';
+    $from = 'no-reply@ramfield.net';
     $subject = "$name has registered for the $eventName event ! ";
     $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-    $headers .= "Bcc: darrionjw@outlook.com\r\n";
+    $headers .= "Bcc: accounts@ramfield.net\r\n";
     $tracker_link = 'https://nest.ramfield.net/staff-login.php' . $uniqid;
     $message = '<p>' . $name . ' has registered for the event titile' . $EventName . ' there email address is as follows ' . $email . 'If you excluded any information such as a link or an address from the listing now is the time to communicate with students and finalize that information. </p>';
     $message .= "</br>";
