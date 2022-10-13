@@ -129,7 +129,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Event Title          : $event </p>";
   if (!is_null($imgdir)) {
     $padding = '1';
-    echo "<img src= \" $imgdir \"  style=\" border: 3px solid #000000; float: left;margin-left:0%;width:30%;height:auto;border-radius:2%;height: auto;\"> </img>";
+    echo "<img src= \"$imgdir\"  style=\" border: 3px solid #000000; float: left;margin-left:0%;width:30%;height:auto;border-radius:2%;height: auto;\"> </img>";
   }
   echo "<p style=\"text-align: center; margin-left:1%; margin-top:10px; margin-bottom:8px; width: 0px auto; \"> Event Description: </p>";
   echo "<p style=\"text-align: center; margin-left:1%;";
