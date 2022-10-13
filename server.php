@@ -330,8 +330,8 @@ if (isset($_POST['login_student'])) {
 			$_SESSION['email'] = $email;
 			$_SESSION['Firstname'] = $FirstName;
 			$_SESSION['Activated'] = $code;
-			$_SESSION['Activated'] = $code;
 			$_SESSION['success'] = "You are now logged in";
+			$_SESSION['locker'] = "open";
 			if ($code != $activated) {
 				array_push($errors, "You must activate your account first ! ");
 				session_destroy();
@@ -477,7 +477,6 @@ if (isset($_POST['Log_Event'])) {
 		if (isset($_POST["submit"])) {
 			$check = getimagesize($_FILES["imageUpload"]["tmp_name"]);
 			if ($check !== false) {
-				echo "File is an image - " . $check["mime"] . ".";
 				$uploadOk = 1;
 			}
 			else {
@@ -500,7 +499,7 @@ if (isset($_POST['Log_Event'])) {
 
 		// Allow certain file formats
 		if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-		&& $imageFileType != "gif") {
+		&& $imageFileType != "gif" && $imageFileType != "heic" ) {
 			array_push($errors, "Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
 			$uploadOk = 0;
 		}
@@ -513,6 +512,10 @@ if (isset($_POST['Log_Event'])) {
 		else {
 			if (move_uploaded_file($_FILES["imageUpload"]["tmp_name"], $target_file)) {
 			// echo "The file ". basename( $_FILES["imageUpload"]["name"]). " has been uploaded.";
+			// find the filename and the sid 
+			// encrypt the file by name filename class sid
+
+			// shell_exec("encore write $target_file", basename($_FILES["imageUpload"]["name"]), "$sid" );
 			}
 			else {
 				array_push($errors, "Sorry, there was an error uploading your file.");
@@ -554,7 +557,7 @@ if (isset($_POST['Log_Event'])) {
 		// staff email for submitted emails.
 		}
 
-		header('location: index.php');
+		// header('location: index.php');
 
 	}
 
@@ -741,6 +744,15 @@ function PullEventPage()
 
 }
 
+function locker() {
+	$lock = $_SESSION['locker'];
+	
+	if ( "$lock" == "open" ){
+		// scna through uploads folder
+		// decrypt files 
+	} elseif ()
+
+}
 function adv_list($opp, $num)
 {
 	global $db;
