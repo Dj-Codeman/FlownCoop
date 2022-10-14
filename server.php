@@ -750,8 +750,17 @@ function locker() {
 	if ( "$lock" == "open" ){
 		// scna through uploads folder
 		// decrypt files 
-	} elseif ()
+		relax();
+	} elseif ( "$lock" == "closed" ){
+		relax();
+	} else {
+		relax();
+	}
 
+}
+
+function relax() {
+	shell_exec("echo \" HELLO OUT THERE > /dev/null \"");
 }
 function adv_list($opp, $num)
 {
