@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('locker/locker.php');
 
 // initializing variables
 //     <3
@@ -338,6 +339,8 @@ if (isset($_POST['login_student'])) {
 				unset($_SESSION['username']);
 			}
 			else {
+
+				locker_unlock($sid);
 				header('location: index.php');
 			}
 		}
@@ -469,7 +472,8 @@ if (isset($_POST['Log_Event'])) {
 			mkdir($directoryName, 0777);
 		}
 		$target_dir = "uploads/$sid/";
-		$target_file = $target_dir . basename($_FILES["imageUpload"]["name"]);
+		// locker required
+		$target_file = $target_dir . item_san(basename($_FILES["imageUpload"]["name"]));
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -759,9 +763,6 @@ function locker() {
 
 }
 
-function relax() {
-	shell_exec("echo \" HELLO OUT THERE > /dev/null \"");
-}
 function adv_list($opp, $num)
 {
 	global $db;

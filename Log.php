@@ -125,8 +125,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
   echo "<div class=\"home-events\" style=\"margin-top: 10px; overflow: hidden; margin-left: 10%; width: 80%;  height: auto;\" >";
+  echo "<h4 style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Event Title          : $event </h4>";
   echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Event Id             : $uid </p>";
-  echo "<p style=\"text-align: center; margin-left:1%; margin-bottom:8px; width: 0px auto; \"> Event Title          : $event </p>";
   if (!is_null($imgdir)) {
     $padding = '1';
     echo "<img src= \"$imgdir\"  style=\" border: 3px solid #000000; float: left;margin-left:0%;width:30%;height:auto;border-radius:2%;height: auto;\"> </img>";
