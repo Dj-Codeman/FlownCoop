@@ -72,7 +72,7 @@
 <div> <P>
   <?php
 
-  $db = mysqli_connect('192.168.0.3', 'Client', 'Y&0E1{8u){S?', 'Nest');
+$db = mysqli_connect('207.244.242.167', 'Client', 'Y&0E1{8u){S?', 'Nest');
 
     include('errors.php');
 
