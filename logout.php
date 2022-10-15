@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('locker/locker.php');
+include('locker/locker.php');
 $sid = $_SESSION['sid'];
 locker_trim($sid);
 locker_lock($sid);

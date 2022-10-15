@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('locker/locker.php');
+include('locker/locker.php');
 
 // initializing variables
 //     <3
@@ -340,7 +340,7 @@ if (isset($_POST['login_student'])) {
 			}
 			else {
 
-				locker_unlock($sid);
+				locker_unlock($_SESSION['sid']);
 				header('location: index.php');
 			}
 		}
