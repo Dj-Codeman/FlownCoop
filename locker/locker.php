@@ -24,17 +24,23 @@ function relax()
 
 function locate($base)
 {
-    if (isset($base)) {
+    if (!empty($base)) {
         relax();
-    }
-    elseif (isset($_SESSION['sid'])) {
-        $base = $_SESSION['sid'];
+        echo "base imported \n";
     }
     else {
-        echo "No base given";
-        exit;
+        echo "Base not provided sourcing ...";
+        $base = $_SESSION['sid'];
+
+        if (!empty($base)) {
+            echo "base sourced";
+            relax();
+        } else {
+            echo "no base provided";
+            exit;
+        }
     }
-    $basedir = "uploads/$base/";
+    $basedir = "../uploads/$base/";
     return $basedir;
 }
 
@@ -54,11 +60,9 @@ function locker_initialize($base)
             $oldfile = locker_san(realpath($canonicalpath));
             //  Cleanign the white spaces and underscore for encore compatibility
             // https://github.com/Dj-Codeman/encryption-core
-            $string = item_san($canonicalpath);
-            $newfile = str_replace("$canonicalpath", "$string", "$oldfile");
-            $newfile = locker_san($newfile);
+            $newfile = item_san($oldfile);
 
-            shell_exec("mv $oldfile $newfile");
+            shell_exec("mv -v $oldfile $newfile");
         }
         else {
             relax();
@@ -109,6 +113,8 @@ function locker_lock($base)
 
             // This section combines all all the individule parts we extracted to get a usable path while
             // retaining individule parts
+            $fname = item_san($fname);
+            
             $item = "./$basedir";
             $item .= "$fname";
             $item .= ".$fext";
@@ -184,10 +190,10 @@ function locker_destroy($base)
 //  Cleaning and formatting sections
 function item_san($canonicalpath)
 {
-    $string = str_replace(" ", "#", "$canonicalpath");
-    $string = str_replace("_", "=", "$canonicalpath");
-    $string = str_replace("(", "-", "$canonicalpath");
-    $string = str_replace("'", "", "$canonicalpath");
+    $string = str_replace("'", "qt", "$canonicalpath");
+    $string .= str_replace(" ", "", "$string");
+    $string .= str_replace("_", "=", "$string");
+    $string .= str_replace("(", "bx", "$string");
     return $string;
 }
 
