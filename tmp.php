@@ -20,4 +20,5 @@ function locate($base)
     $basedir = "uploads/$base/";
     return $basedir;
 }
+// fixed locate function
 ?>
